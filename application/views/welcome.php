@@ -84,19 +84,19 @@
                 <div class="row g-5 align-items-center">
 					<?php foreach($dataBerita as $item) : ?>
 					<div class="col-lg-3">
-						<div class="card" style="">
-							<img src="<?=base_url('assets/img/testimonial-1.jpg')?>" class="card-img-top" alt="...">
+						<div class="card">
+							<img src="<?='http://localhost/prosideska/assets/berita/'.$item['cover']?>"
+                                class="card-img-top"
+                                alt="..."
+                                height="200">
 							<div class="card-body">
 								<h5 class="card-title"><?=ucwords($item['title'])?></h5>
-								<p class="card-text"><?=substr($item['deskripsi'],0,100)?></p>
-								<a href="<?=base_url('berita/detailberita/')?><?=$item['id']?>" class="btn btn-primary">Selanjutnya</a>
+                                <p class="card-text"><?=substr($item['deskripsi'],0,30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
+                                <a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
 							</div>
 						</div>
 					</div>
 					<?php endforeach?>
-				</div>
-				<div class="d-flex justify-content-end mt-5">
-					<a href="#" class="btn btn-primary">Selengkapnya</a>
 				</div>
 			</div>
         </div>
@@ -142,7 +142,20 @@
         </div>
         <!-- Jobs End -->
 
-
+        <!--- Map --->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Lokasi</h1>
+            </div>
+            <div class="col-md-12 wow fadeInUp" data-wow-delay="0.1s">
+                <iframe class="position-relative rounded w-100 h-100"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                    frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+                    
+        <!--- Map End --->
 
         <!-- Footer Start -->
 		<?php $this->load->view('_partials/footer.php') ?>

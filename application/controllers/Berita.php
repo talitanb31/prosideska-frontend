@@ -1,23 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-
-/**
- *
- * Controller Berita
- *
- * This controller for ...
- *
- * @package   CodeIgniter
- * @category  Controller CI
- * @author    Setiawan Jodi <jodisetiawan@fisip-untirta.ac.id>
- * @author    Raul Guerrero <r.g.c@me.com>
- * @link      https://github.com/setdjod/myci-extension/
- * @param     ...
- * @return    ...
- *
- */
-
 class Berita extends CI_Controller
 {
     
@@ -29,10 +12,22 @@ class Berita extends CI_Controller
 
   public function index()
   {
-		$data['dataBerita'] = $this->berita_model->getAllData();
+    $data = [];
+    if($this->input->get('q') !== null)
+      $data['dataBerita'] = $this->berita_model->search($this->input->get('q'));
+    else
+      $data['dataBerita'] = $this->berita_model->getAllData();
 
     return $this->load->view('portal_berita/index',$data);
   }
+
+  public function detail($slug)
+  {
+      $data['data'] = $this->berita_model->detail($slug);
+      $data['beritaLainnya'] = $this->berita_model->beritaOther($slug);
+
+      return $this->load->view('portal_berita/detail',$data);
+    }
 
 }
 

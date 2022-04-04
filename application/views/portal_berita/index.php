@@ -32,19 +32,29 @@
         </div>
         <!-- Header End -->
 
-		  <!-- Category Start -->
+		  <!-- Berita Start -->
 		  <div class="container-xxl py-5">
             <div class="container">
-                <!-- <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Alur/Syarat Pengajuan Surat</h1> -->
                 <div class="row g-4">
+                    <form action="<?php site_url('berita/index') ?>" class="row" method="get">
+                        <div class="col-xl-4 col-md-4 col-sm-4 col-8">
+                            <input type="text" name="q" id="q" class="form-control" placeholder="Cari disini...">
+                        </div>
+                        <div class="col-xl-2 col-md-2 col-sm-2 col-4">
+                            <button type="submit" class="btn btn-success">Cari</button>
+                        </div>
+                    </form>
 					<?php foreach($dataBerita as $item) : ?>
 					<div class="col-lg-3">
-						<div class="card" style="">
-							<img src="<?=base_url('assets/img/testimonial-1.jpg')?>" class="card-img-top" alt="...">
-							<div class="card-body">
+						<div class="card">
+                            <img src="<?='http://localhost/prosideska/assets/berita/'.$item['cover']?>"
+                                class="card-img-top"
+                                alt="..."
+                                height="200">
+                            <div class="card-body">
 								<h5 class="card-title"><?=ucwords($item['title'])?></h5>
-								<p class="card-text"><?=substr($item['deskripsi'],0,100)?></p>
-								<a href="<?=base_url('berita/detailberita/')?><?=$item['id']?>" class="btn btn-primary">Selanjutnya</a>
+								<p class="card-text"><?=substr($item['deskripsi'],0,30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
+								<a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
 							</div>
 						</div>
 					</div>

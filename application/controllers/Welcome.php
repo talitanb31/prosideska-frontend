@@ -26,7 +26,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['dataSurat'] = $this->surat_model->getAllData();
-		$data['dataBerita'] = $this->berita_model->getAllData();
+		$data['dataBerita'] = $this->berita_model->getLimitData();
 		
 		$this->load->view('welcome',$data);
 	}

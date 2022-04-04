@@ -1,21 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/**
- *
- * Model Berita_model
- *
- * This Model for ...
- * 
- * @package		CodeIgniter
- * @category	Model
- * @author    Setiawan Jodi <jodisetiawan@fisip-untirta.ac.id>
- * @link      https://github.com/setdjod/myci-extension/
- * @param     ...
- * @return    ...
- *
- */
-
 class Berita_model extends CI_Model {
 
   // ------------------------------------------------------------------------
@@ -25,25 +10,52 @@ class Berita_model extends CI_Model {
     parent::__construct();
   }
 
-  // ------------------------------------------------------------------------
-
-
-  // ------------------------------------------------------------------------
   public function getAllData()
   {
 		$this->db->select('*');
 		$this->db->from($this->_table);
 		$this->db->order_by('id','DESC');
-		$this->db->limit(3);
 		$query = $this->db->get()->result_array();
-		// print_r($query);
+
     return $query;
-		
   }
 
-  // ------------------------------------------------------------------------
+  public function search($q)
+  {
+		$this->db->select('*');
+		$this->db->from($this->_table);
+		$this->db->like('title', $q);
+		$this->db->order_by('id','DESC');
+		$query = $this->db->get()->result_array();
 
+    return $query;
+  }
+
+  public function getLimitData()
+  {
+		$this->db->select('*');
+		$this->db->from($this->_table);
+		$this->db->order_by('id','DESC');
+		$this->db->limit(4);
+		$query = $this->db->get()->result_array();
+
+    return $query;
+  }
+
+  public function beritaOther($slug)
+  {
+		$this->db->select('*');
+		$this->db->from($this->_table);
+		$this->db->where('slug !=', $slug);
+		$this->db->order_by('id','DESC');
+		$this->db->limit(3);
+		$query = $this->db->get()->result_array();
+
+    return $query;
+  }
+
+  public function detail($slug)
+  {
+      return $this->db->get_where($this->_table, ['slug' => $slug])->row_array();
+  }
 }
-
-/* End of file Berita_model.php */
-/* Location: ./application/models/Berita_model.php */

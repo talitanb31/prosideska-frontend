@@ -11,21 +11,23 @@
 			<a href="<?=base_url() ?>" class="nav-item nav-link <?php echo $this->uri->segment(1) != null ? '' : 'active' ?>">Beranda</a>
 			<a href="<?=base_url('berita') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'berita' ? 'active' : '' ?>">Portal Berita</a>
 			<a href="<?=base_url('alursyarat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'alursyarat' ? 'active' : '' ?>">Alur/Syarat Pengajuan Surat</a>
-			<a href="<?=base_url('requestsurat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'requestsurat' ? 'active' : '' ?>">Request Surat</a>
-			<!-- <div class="nav-item dropdown">
-				<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
-				<div class="dropdown-menu rounded-0 m-0">
-					<a href="job-list.html" class="dropdown-item">Job List</a>
-					<a href="job-detail.html" class="dropdown-item">Job Detail</a>
-				</div>
-			</div> -->
-			<a href="<?=base_url('notifikasi') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'notifikasi' ? 'active' : '' ?>">Notifikasi</a>
-			
-			<!-- <a href="contact.html" class="nav-item nav-link">Kritik Saran</a> -->
-			<!-- <a href="contact.html" class="nav-item nav-link"></a> -->
+			<a href="<?=base_url('requestsurat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'requestsurat' ? 'active' : '' ?>">Pengajuan Surat</a>
 		</div>
-		<!-- <i class="fa fa-arrow-right ms-3"></i> -->
-		<a href="" class="btn btn-primary btn-sm rounded-0 pt-4 px-3 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+		<?php if(isset($_SESSION['nama'])) { ?>
+		<ul class="navbar-nav">
+            <li class="nav-item btn-rotate dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?= $_SESSION['nama'] ?>
+            </a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				<a class="dropdown-item" href="<?= site_url('notifikasi/index') ?>">Notifikasi</a>
+				<a class="dropdown-item" href="<?= site_url('auth/logout') ?>">Logout</a>
+			</div>
+		</li>
+        </ul>
+		<?php } else { ?>
+		<a href="<?= site_url("auth/index") ?>" class="btn btn-primary btn-sm rounded-0 pt-4 px-3 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+		<?php } ?>
 	</div>
 	
 </nav>
