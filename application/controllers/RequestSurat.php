@@ -1,23 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-
-/**
- *
- * Controller RequestSurat
- *
- * This controller for ...
- *
- * @package   CodeIgniter
- * @category  Controller CI
- * @author    Setiawan Jodi <jodisetiawan@fisip-untirta.ac.id>
- * @author    Raul Guerrero <r.g.c@me.com>
- * @link      https://github.com/setdjod/myci-extension/
- * @param     ...
- * @return    ...
- *
- */
-
 class RequestSurat extends CI_Controller
 {
     
@@ -25,6 +8,7 @@ class RequestSurat extends CI_Controller
   {
     parent::__construct();
 		$this->load->model('surat_model');
+		$this->load->model('PermintaanSurat_model');
   }
 
   public function index()
@@ -34,8 +18,13 @@ class RequestSurat extends CI_Controller
 		return $this->load->view('request_surat/index',$data);
   }
 
+  public function store()
+  {
+    if ($this->PermintaanSurat_model->insert()) {
+      $this->session->set_flashdata('pesan','data berhasil dikirim');
+      
+      echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="http://localhost/prosideska-frontend/requestsurat"</script>';
+    }
+  }
+
 }
-
-
-/* End of file RequestSurat.php */
-/* Location: ./application/controllers/RequestSurat.php */
