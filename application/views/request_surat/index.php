@@ -41,7 +41,7 @@
 						<div class="col-md-12">
 							<div class="form-floating">
 								<input type="hidden" name="jenis_surat" id="jenis_surat">
-								<select name="id_jenis_surat" id="id_jenis_surat" class="form-select jenisSurat">
+								<select name="id_jenis_surat" id="id_jenis_surat" class="form-select jenisSurat" required>
 									<option value="">Pilih jenis surat</option>
 									<?php foreach ($dataSurat as $item) : ?>
 										<option value="<?= $item['id'] ?>" data-jenis="<?= $item['jenis'] ?>"><?= $item['jenis'] ?></option>
@@ -88,7 +88,10 @@
 				<?php $this->load->view('request_surat/surat-persyaratan-nikah') ?>
 			} else if (jenis == 'Surat Usaha') {
 				<?php $this->load->view('request_surat/surat-usaha') ?>
+			} else if (jenis == 'Surat Kematian') {
+				<?php $this->load->view('request_surat/surat-kematian') ?>
 			}
+
 			$('#jenis_surat').val(jenis)
 		});
 		$('.inputSurat').on('click', '.tambahKeluarga', function() {
