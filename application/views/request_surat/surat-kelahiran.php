@@ -14,8 +14,8 @@ $(".inputSurat").append(`
 	<input type="text" class="form-control" placeholder="Tempat Kelahiran" name="tempat_kelahiran">
 </div>
 <div class="col-md-3">
-	<label for="">Hari dan Tanggal Lahir</label>
-	<input type="date" class="form-control" placeholder="Tempat Kelahiran" name="tanggal_lahir">
+	<label for="">Tanggal Lahir</label>
+	<input type="date" class="form-control" name="tanggal_lahir">
 </div>
 <div class="col-md-3">
 	<label for="">Pukul</label>
@@ -34,8 +34,8 @@ $(".inputSurat").append(`
 	<input type="number" class="form-control" placeholder="Berat Bayi" name="berat_bayi">
 </div>
 <div class="col-md-3">
-	<label for="">Tinggi Bayi</label>
-	<input type="number" class="form-control" placeholder="Tinggi BayiTinggi Bayi" name="tinggi_bayi">
+	<label for="">Panjang Bayi</label>
+	<input type="number" class="form-control" placeholder="Panjang Bayi" name="panjang_bayi">
 </div>
 <!-- Ibu -->
 <h5 class="mt-4">IBU</h5>

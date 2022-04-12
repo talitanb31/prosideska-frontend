@@ -40,7 +40,8 @@
 					<div class="row g-3">
 						<div class="col-md-12">
 							<div class="form-floating">
-								<select name="jenis_surat" id="jenis_surat" class="form-select jenisSurat">
+								<input type="hidden" name="jenis_surat" id="jenis_surat">
+								<select name="id_jenis_surat" id="id_jenis_surat" class="form-select jenisSurat">
 									<option value="">Pilih jenis surat</option>
 									<?php foreach ($dataSurat as $item) : ?>
 										<option value="<?= $item['id'] ?>" data-jenis="<?= $item['jenis'] ?>"><?= $item['jenis'] ?></option>
@@ -88,6 +89,7 @@
 			} else if (jenis == 'Surat Usaha') {
 				<?php $this->load->view('request_surat/surat-usaha') ?>
 			}
+			$('#jenis_surat').val(jenis)
 		});
 		$('.inputSurat').on('click', '.tambahKeluarga', function() {
 			$('#keluarga').append(`

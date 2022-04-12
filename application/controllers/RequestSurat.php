@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class RequestSurat extends CI_Controller
 {
-    
+
   public function __construct()
   {
     parent::__construct();
@@ -13,18 +13,36 @@ class RequestSurat extends CI_Controller
 
   public function index()
   {
-    $data['title'] = 'Request Surat';
-		$data['dataSurat'] = $this->surat_model->getSurat();
-		return $this->load->view('request_surat/index',$data);
+    if(isset($_SESSION['nik'])) {
+      $data['title'] = 'Request Surat';
+      $data['dataSurat'] = $this->surat_model->getSurat();
+      return $this->load->view('request_surat/index',$data);
+    }
+    else
+      echo '<script type="text/javascript">alert("Harap login terlebih dahulu");window.location="'.base_url().'auth/"</script>';
   }
 
   public function store()
   {
-    if ($this->PermintaanSurat_model->insert()) {
-      $this->session->set_flashdata('pesan','data berhasil dikirim');
-      
-      echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="http://localhost/prosideska-frontend/requestsurat"</script>';
+    /*
+      1. Mengkonversi form data menjadi json
+      2. Simpan ke database
+    */
+
+    /* Mengkonversi form data menjadi json */
+    foreach ($_POST as $key => $value) {
+      $form[$key] = $value;
     }
+    $json = json_encode($form);
+    /* End Mengkonversi form data menjadi json */
+
+    /* Simpan ke database */
+    if ($this->PermintaanSurat_model->insert($json)) {
+      $this->session->set_flashdata('pesan','Pengajuan berhasil dikirim');
+
+      echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="'.base_url().'requestsurat"</script>';
+    }
+    /* End Simpan ke database */
   }
 
 }
