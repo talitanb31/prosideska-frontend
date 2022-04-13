@@ -13,7 +13,7 @@ class PermintaanSurat_model extends CI_Model {
   public function insert($json)
     {
         $data = array(
-						'id_jenis_surat' => (int)$this->input->post('jenis_surat'),
+						'id_jenis_surat' => (int)$this->input->post('id_jenis_surat'),
             'nik' => $_SESSION['nik'],
 						'form_data' => $json,
             'created_at' => date('Y-m-d H:i:s'),
