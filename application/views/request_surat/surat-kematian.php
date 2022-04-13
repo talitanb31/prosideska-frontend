@@ -93,7 +93,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Pekerjaan</label>
-	<input type="pekerjaan" class="form-control" placeholder="Pekerjaan" name="pekerjaan_ibu">
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_ibu">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Provinsi</label>
@@ -143,7 +143,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Pekerjaan</label>
-	<input type="pekerjaan" class="form-control" placeholder="Pekerjaan" name="pekerjaan_ayah">
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_ayah">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Provinsi</label>
@@ -193,7 +193,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Pekerjaan</label>
-	<input type="pekerjaan" class="form-control" placeholder="Pekerjaan" name="pekerjaan_pelapor">
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_pelapor">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Provinsi</label>
@@ -239,7 +239,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Pekerjaan</label>
-	<input type="pekerjaan" class="form-control" placeholder="Pekerjaan" name="pekerjaan_saksi1">
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_saksi1">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Provinsi</label>
@@ -281,7 +281,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Pekerjaan</label>
-	<input type="pekerjaan" class="form-control" placeholder="Pekerjaan" name="pekerjaan_saksi2">
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_saksi2">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Provinsi</label>

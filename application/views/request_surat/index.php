@@ -90,6 +90,8 @@
 				<?php $this->load->view('request_surat/surat-usaha') ?>
 			} else if (jenis == 'Surat Kematian') {
 				<?php $this->load->view('request_surat/surat-kematian') ?>
+			} else if (jenis == 'Surat Kuasa') {
+				<?php $this->load->view('request_surat/surat-kuasa') ?>
 			}
 
 			$('#jenis_surat').val(jenis)

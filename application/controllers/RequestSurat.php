@@ -31,7 +31,7 @@ class RequestSurat extends CI_Controller
 
     /* Mengkonversi form data menjadi json */
     foreach ($_POST as $key => $value) {
-      $form[$key] = $value;
+      $form[$key] = isset($value) ? $value : '-';
     }
     $json = json_encode($form);
     /* End Mengkonversi form data menjadi json */
