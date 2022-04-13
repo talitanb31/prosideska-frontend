@@ -105,4 +105,14 @@ $(".inputSurat").append(`
 	<label for="">Nama Lengkap Ayah</label>
 	<input type="text" class="form-control" placeholder="Nama Lengkap Ayah" name="nama_ayah">
 </div>
+<!-- Data Administrasi -->
+<h5 class="mt-4">Data Administrasi</h5>
+<div class="col-md-6 mb-2">
+	<label for="">Nama Ketua RT</label>
+	<input type="text" class="form-control" placeholder="Nama ketua RT" name="nama_ketua_rt">
+</div>
+<div class="col-md-6 mb-2">
+	<label for="">Nama Ketua RW</label>
+	<input type="text" class="form-control" placeholder="Nama ketua RW" name="nama_ketua_rw">
+</div>
 `)
