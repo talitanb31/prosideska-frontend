@@ -7,19 +7,21 @@ class RequestSurat extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-		$this->load->model('surat_model');
-		$this->load->model('PermintaanSurat_model');
+    $this->load->model('surat_model');
+    $this->load->model('PermintaanSurat_model');
+    $this->load->model('notifikasi_model');
   }
 
   public function index()
   {
-    if(isset($_SESSION['nik'])) {
+    if (isset($_SESSION['nik'])) {
       $data['title'] = 'Request Surat';
       $data['dataSurat'] = $this->surat_model->getSurat();
-      return $this->load->view('request_surat/index',$data);
-    }
-    else
-      echo '<script type="text/javascript">alert("Harap login terlebih dahulu");window.location="'.base_url().'auth/"</script>';
+      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+
+      return $this->load->view('request_surat/index', $data);
+    } else
+      echo '<script type="text/javascript">alert("Harap login terlebih dahulu");window.location="' . base_url() . 'auth/"</script>';
   }
 
   public function store()
@@ -38,11 +40,10 @@ class RequestSurat extends CI_Controller
 
     /* Simpan ke database */
     if ($this->PermintaanSurat_model->insert($json)) {
-      $this->session->set_flashdata('pesan','Pengajuan berhasil dikirim');
+      $this->session->set_flashdata('pesan', 'Pengajuan berhasil dikirim');
 
-      echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="'.base_url().'requestsurat"</script>';
+      echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="' . base_url() . 'requestsurat"</script>';
     }
     /* End Simpan ke database */
   }
-
 }
