@@ -1,9 +1,17 @@
 $(".inputSurat").append(`
 <!-- Bayi -->
 <h5>BAYI / ANAK</h5>
-<div class="col-md-6">
+<div class="col-md-3">
 	<label for="">Nama Anak</label>
 	<input type="text" class="form-control" placeholder="Nama Anak" name="nama_anak">
+</div>
+<div class="col-md-3">
+	<label for="">Jenis Kelamin</label>
+	<select name="jenis_kelamin" id="jenis_kelamin" class="form-control" style="background-color: white;">
+		<option value="">Pilih jenis kelamin</option>
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
 </div>
 <div class="col-md-6">
 	<label for="">Tempat Dilahirkan</label>
@@ -37,19 +45,51 @@ $(".inputSurat").append(`
 	<label for="">Panjang Bayi</label>
 	<input type="number" class="form-control" placeholder="Panjang Bayi" name="panjang_bayi">
 </div>
+<div class="col-md-3">
+	<label for="">Agama</label>
+	<input type="text" class="form-control" placeholder="ex: Islam" name="agama_anak">
+</div>
+<div class="col-md-3">
+	<label for="">Pekerjaan</label>
+	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_anak">
+</div>
+<div class="col-md-3">
+	<label for="">NIK</label>
+	<input type="number" class="form-control" placeholder="NIK" name="nik_anak">
+</div>
+<div class="col-md-3">
+	<label for="">Alamat</label>
+	<input type="text" class="form-control" placeholder="Alamat" name="alamat_anak">
+</div>
 <!-- Ibu -->
 <h5 class="mt-4">IBU</h5>
-<div class="col-md-6">
+<div class="col-md-3">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK ibu" name="nik_ibu">
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
 	<label for="">Nama Lengkap</label>
 	<input type="text" class="form-control" placeholder="Nama lengkap ibu" name="nama_ibu">
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
+	<label for="">Jenis kelamin</label>
+	<select name="jenis_kelamin_ibu" id="jenis_kelamin_ibu" class="form-control" style="background-color: white;">
+		<option value="">Pilih jenis kelamin</option>
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
+</div>
+<div class="col-md-3">
+	<label for="">Agama</label>
+	<input type="text" class="form-control" placeholder="ex: Islam" name="agama_ibu">
+</div>
+<div class="col-md-3">
+	<label for="">Tempat lahir</label>
+	<input type="text" class="form-control" placeholder="Tempat lahir" name="tempat_lahir_ibu">
+</div>
+<div class="col-md-3">
 	<label for="">Tanggal lahir</label>
-	<input type="date" class="form-control" placeholder="Taggal lahir" name="taggal_lahir_ibu">
+	<input type="date" class="form-control" placeholder="Tanggal lahir" name="tanggal_lahir_ibu">
 </div>
 <div class="col-md-3">
 	<label for="">Pekerjaan</label>
@@ -89,17 +129,33 @@ $(".inputSurat").append(`
 </div>
 <!-- Ayah -->
 <h5 class="mt-4">AYAH</h5>
-<div class="col-md-6">
+<div class="col-md-3">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK ayah" name="nik_ayah">
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
 	<label for="">Nama Lengkap</label>
 	<input type="text" class="form-control" placeholder="Nama lengkap ayah" name="nama_ayah">
 </div>
-<div class="col-md-6">
+<div class="col-md-3">
+	<label for="">Jenis kelamin</label>
+	<select name="jenis_kelamin_ayah" id="jenis_kelamin_ayah" class="form-control" style="background-color: white;">
+		<option value="">Pilih jenis kelamin</option>
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
+</div>
+<div class="col-md-3">
+	<label for="">Agama</label>
+	<input type="text" class="form-control" placeholder="ex: Islam" name="agama_ayah">
+</div>
+<div class="col-md-3">
+	<label for="">Tempat lahir</label>
+	<input type="text" class="form-control" placeholder="Tempat lahir" name="tempat_lahir_ayah">
+</div>
+<div class="col-md-3">
 	<label for="">Tanggal lahir</label>
-	<input type="date" class="form-control" placeholder="Taggal lahir" name="taggal_lahir_ayah">
+	<input type="date" class="form-control" placeholder="Tanggal lahir" name="tanggal_lahir_ayah">
 </div>
 <div class="col-md-3">
 	<label for="">Pekerjaan</label>
@@ -138,7 +194,7 @@ $(".inputSurat").append(`
 	<input type="text" class="form-control" placeholder="INDONESIA" name="kebangsaan_ayah">
 </div>
 <!-- Pelapor -->
-<h5 class="mt-4">PELAPOR</h5>
+<!-- <h5 class="mt-4">PELAPOR</h5>
 <div class="col-md-6">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_pelapor">
@@ -178,9 +234,9 @@ $(".inputSurat").append(`
 <div class="col-md-3">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_pelapor">
-</div>
+</div> -->
 <!-- Saksi 1 -->
-<h5 class="mt-4">SAKSI 1</h5>
+<!-- <h5 class="mt-4">SAKSI 1</h5>
 <div class="col-md-6">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_saksi1">
@@ -220,9 +276,9 @@ $(".inputSurat").append(`
 <div class="col-md-3">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_saksi1">
-</div>
+</div> -->
 <!-- Saksi 2 -->
-<h5 class="mt-4">SAKSI 2</h5>
+<!-- <h5 class="mt-4">SAKSI 2</h5>
 <div class="col-md-6">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_saksi2">
@@ -262,5 +318,5 @@ $(".inputSurat").append(`
 <div class="col-md-3">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_saksi2">
-</div>
+</div> -->
 `)
