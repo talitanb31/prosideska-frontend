@@ -1,6 +1,6 @@
 $(".inputSurat").append(`
 <!-- Yang bertanda tangan -->
-<h5 class="mt-4">Yang bertanda tangan dibawah ini</h5>
+<!-- <h5 class="mt-4">Yang bertanda tangan dibawah ini</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_ttd">
@@ -40,7 +40,7 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_ttd">
-</div>
+</div> -->
 <!-- Penerima kuasa -->
 <h5 class="mt-4">Penerima Kuasa</h5>
 <div class="col-md-6 mb-2">
