@@ -1,6 +1,6 @@
 $(".inputSurat").append(`
 <!-- Data Keluarga -->
-<h5 class="mt-4">Data Keluarga</h5>
+<!-- <h5 class="mt-4">Data Keluarga</h5>
 <div class="col-md-6 mb-2">
 	<label for="">Nama Kepala Keluarga</label>
 	<input type="text" class="form-control" placeholder="Nama kepala keluarga" name="nama_kepala_keluarga">
@@ -36,9 +36,9 @@ $(".inputSurat").append(`
 <div class="col-md-6 mb-2">
 	<label for="">Nomor Telepon</label>
 	<input type="text" class="form-control" placeholder="Nomor telepon" name="no_telp">
-</div>
+</div> -->
 <!-- Data Invidu -->
-<h5 class="mt-4">Data Invidu</h5>
+<!-- <h5 class="mt-4">Data Invidu</h5>
 <div class="col-md-3 mb-2">
 	<label for="">Gelar Akademis</label>
 	<input type="text" class="form-control" placeholder="Gelar Akademis" name="gelar_akademis">
@@ -86,9 +86,9 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">Penyandang Cacat</label>
 	<input type="text" class="form-control" placeholder="Penyandang Cacat" name="penyandang_cacat">
-</div>
+</div> -->
 <!-- Data Orang Tua -->
-<h5 class="mt-4">Data Orang Tua</h5>
+<!-- <h5 class="mt-4">Data Orang Tua</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK Ibu</label>
 	<input type="text" class="form-control" placeholder="NIK Ibu" name="nik_ibu">
@@ -104,9 +104,9 @@ $(".inputSurat").append(`
 <div class="col-md-6 mb-2">
 	<label for="">Nama Lengkap Ayah</label>
 	<input type="text" class="form-control" placeholder="Nama Lengkap Ayah" name="nama_ayah">
-</div>
+</div> -->
 <!-- Data Administrasi -->
-<h5 class="mt-4">Data Administrasi</h5>
+<!-- <h5 class="mt-4">Data Administrasi</h5>
 <div class="col-md-6 mb-2">
 	<label for="">Nama Ketua RT</label>
 	<input type="text" class="form-control" placeholder="Nama ketua RT" name="nama_ketua_rt">
@@ -114,5 +114,5 @@ $(".inputSurat").append(`
 <div class="col-md-6 mb-2">
 	<label for="">Nama Ketua RW</label>
 	<input type="text" class="form-control" placeholder="Nama ketua RW" name="nama_ketua_rw">
-</div>
+</div> -->
 `)
