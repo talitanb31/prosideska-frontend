@@ -19,15 +19,15 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Agama</label>
-  <select class="form-select" name="agama_jenazah">
-    <option value="0">Pilih Agama</option>
-    <option value="Islam">Islam</option>
-    <option value="Kristen">Kristen</option>
-    <option value="Katolik">Katolik</option>
-    <option value="Budha">Budha</option>
-    <option value="Hindu">Hindu</option>
-    <option value="Konghuchu">Konghuchu</option>
-  </select>
+	<select class="form-select" name="agama_jenazah">
+		<option value="0">Pilih Agama</option>
+		<option value="Islam">Islam</option>
+		<option value="Kristen">Kristen</option>
+		<option value="Katolik">Katolik</option>
+		<option value="Budha">Budha</option>
+		<option value="Hindu">Hindu</option>
+		<option value="Konghuchu">Konghuchu</option>
+	</select>
 </div>
 <div class="col-md-6 mb-2">
 	<label for="">Anak ke</label>
@@ -78,7 +78,7 @@ $(".inputSurat").append(`
 	<input type="number" class="form-control" placeholder="Lainnya" name="yang_menerangkan">
 </div>
 <!-- Ibu -->
-<h5 class="mt-4">IBU</h5>
+<!-- <h5 class="mt-4">IBU</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK ibu" name="nik_ibu">
@@ -126,9 +126,9 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">Kebangsaan</label>
 	<input type="text" class="form-control" placeholder="INDONESIA" name="kebangsaan_ibu">
-</div>
+</div> -->
 <!-- Ayah -->
-<h5 class="mt-4">AYAH</h5>
+<!-- <h5 class="mt-4">AYAH</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK ayah" name="nik_ayah">
@@ -176,9 +176,9 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">Kebangsaan</label>
 	<input type="text" class="form-control" placeholder="INDONESIA" name="kebangsaan_ayah">
-</div>
+</div> -->
 <!-- Pelapor -->
-<h5 class="mt-4">PELAPOR</h5>
+<!-- <h5 class="mt-4">PELAPOR</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_pelapor">
@@ -222,9 +222,9 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">Hubungan dengan yang mati</label>
 	<input type="text" class="form-control" placeholder="Anak" name="hubungan_dengan_yang_mati">
-</div>
+</div> -->
 <!-- Saksi 1 -->
-<h5 class="mt-4">SAKSI 1</h5>
+<!-- <h5 class="mt-4">SAKSI 1</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_saksi1">
@@ -264,9 +264,9 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_saksi1">
-</div>
+</div> -->
 <!-- Saksi 2 -->
-<h5 class="mt-4">SAKSI 2</h5>
+<!-- <h5 class="mt-4">SAKSI 2</h5>
 <div class="col-md-6 mb-2">
 	<label for="">NIK</label>
 	<input type="text" class="form-control" placeholder="NIK" name="nik_saksi2">
@@ -306,5 +306,5 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">RW</label>
 	<input type="number" class="form-control" placeholder="RW" name="rw_saksi2">
-</div>
+</div> -->
 `)

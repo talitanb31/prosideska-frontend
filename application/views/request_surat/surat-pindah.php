@@ -45,7 +45,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-6">
 	<label for="">Status No KK Bagi Yang Tidak Pindah</label>
-	<select class="form-control" name="tidak_pindah">
+	<select class="form-control" name="tidak_pindah" style="background-color: white;">
 		<option value="0">---Pilih Status---</option>
 		<option value="1">Numpang KK</option>
 		<option value="2">Membuat KK Baru</option>
@@ -55,7 +55,7 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-6">
 	<label for="">Status No KK Bagi Yang Pindah</label>
-	<select class="form-control" name="pindah">
+	<select class="form-control" name="pindah" style="background-color: white;">
 		<option value="0">---Pilih Status---</option>
 		<option value="1">Numpang KK</option>
 		<option value="2">Membuat KK Baru</option>
@@ -74,7 +74,7 @@ $(".inputSurat").append(`
 		</div>
 		<div class="col-md-4">
 			<label for=""></label>
-			<input type="text" class="form-control" placeholder="Nama Keluarga" name="nama_keluarga">
+			<input type="text" class="form-control" placeholder="Nama" name="nama_keluarga">
 		</div>
 		<div class="col-md-4">
 			<label for=""></label>

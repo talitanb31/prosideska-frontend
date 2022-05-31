@@ -76,7 +76,7 @@
 		$(".jenisSurat").change(function() {
 			var jenis = $(this).find(':selected').data('jenis')
 			$('.inputSurat').html('')
-			if (jenis == 'Surat Pindah') {
+			if (jenis == 'Surat Keterangan Pindah') {
 				<?php $this->load->view('request_surat/surat-pindah') ?>
 			} else if (jenis == 'SKCK') {
 				<?php $this->load->view('request_surat/skck') ?>
@@ -84,14 +84,20 @@
 				<?php $this->load->view('request_surat/surat-kelahiran') ?>
 			} else if (jenis == 'Surat Tidak Mampu') {
 				<?php $this->load->view('request_surat/surat-tidak-mampu') ?>
-			} else if (jenis == 'Surat Persyaratan Nikah') {
-				<?php $this->load->view('request_surat/surat-persyaratan-nikah') ?>
+			} else if (jenis == 'Surat Keterangan Belum Menikah') {
+				<?php $this->load->view('request_surat/surat-belum-menikah') ?>
 			} else if (jenis == 'Surat Usaha') {
 				<?php $this->load->view('request_surat/surat-usaha') ?>
 			} else if (jenis == 'Surat Kematian') {
 				<?php $this->load->view('request_surat/surat-kematian') ?>
 			} else if (jenis == 'Surat Kuasa') {
 				<?php $this->load->view('request_surat/surat-kuasa') ?>
+			} else if (jenis == 'Surat Keterangan Kehilangan') {
+				<?php $this->load->view('request_surat/surat-kehilangan') ?>
+			} else if (jenis == 'Surat Keterangan Perjalanan') {
+				<?php $this->load->view('request_surat/surat-perjalanan') ?>
+			} else if (jenis == 'Surat Perwalian') {
+				<?php $this->load->view('request_surat/surat-perwalian') ?>
 			}
 
 			$('#jenis_surat').val(jenis)

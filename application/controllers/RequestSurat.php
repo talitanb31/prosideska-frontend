@@ -18,7 +18,7 @@ class RequestSurat extends CI_Controller
       $data['title'] = 'Request Surat';
       $data['dataSurat'] = $this->surat_model->getSurat();
       $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
-
+      // var_dump($data);
       return $this->load->view('request_surat/index', $data);
     } else
       echo '<script type="text/javascript">alert("Harap login terlebih dahulu");window.location="' . base_url() . 'auth/"</script>';
