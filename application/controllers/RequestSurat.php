@@ -31,11 +31,39 @@ class RequestSurat extends CI_Controller
       2. Simpan ke database
     */
 
+    // echo count($_POST);
     /* Mengkonversi form data menjadi json */
+    /* if ($this->input->post('jenis_surat') == 'Surat Keterangan Pindah') {
+      foreach ($_POST as $key => $value) {
+        $form[$key] = isset($value) ? $value : '-';
+
+        // if ($key == 'nik_keluarga') {
+        //   for ($i = 0; $i < count($value); $i++) {
+        //     $form[$key . ($i + 1)] = isset($value[$i]) ? $value[$i] : '-';
+        //   }
+        // } elseif ($key == 'nama_keluarga') {
+        //   for ($i = 0; $i < count($value); $i++) {
+        //     $form[$key . ($i + 1)] = isset($value[$i]) ? $value[$i] : '-';
+        //   }
+        // } elseif ($key == 'shdk') {
+        //   for ($i = 0; $i < count($value); $i++) {
+        //     $form[$key . ($i + 1)] = isset($value[$i]) ? $value[$i] : '-';
+        //   }
+        // } else {
+        //   $form[$key] = isset($value) ? $value : '-';
+        // }
+      }
+    } else {
+      foreach ($_POST as $key => $value) {
+        $form[$key] = isset($value) ? $value : '-';
+      }
+    } */
     foreach ($_POST as $key => $value) {
       $form[$key] = isset($value) ? $value : '-';
     }
+
     $json = json_encode($form);
+    echo $json;
     /* End Mengkonversi form data menjadi json */
 
     /* Simpan ke database */

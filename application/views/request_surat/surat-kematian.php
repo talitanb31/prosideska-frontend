@@ -75,7 +75,14 @@ $(".inputSurat").append(`
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Yang menerangkan</label>
-	<input type="number" class="form-control" placeholder="Lainnya" name="yang_menerangkan">
+	<!-- <input type="text" class="form-control" placeholder="Lainnya" name="yang_menerangkan"> -->
+	<select name="yang_menerangkan" id="yang_menerangkan" class="form-select">
+		<option value="">Pilih</option>
+		<option value="Dokter">Dokter</option>
+		<option value="Perawat">Perawat</option>
+		<option value="Tes Kes Lainnya">Tes Kes Lainnya</option>
+		<option value="Lainnya">Lainnya</option>
+	</select>
 </div>
 <!-- Ibu -->
 <!-- <h5 class="mt-4">IBU</h5>

@@ -107,15 +107,15 @@
 				<div class="row" id="hapusFamily"">
 					<div class="col-md-4">
 						<label for="">Keluarga Yang Pindah</label>
-						<input type="number" class="form-control" placeholder="NIK" name="nik_keluarga">
+						<input type="number" class="form-control" placeholder="NIK" name="nik_keluarga[]">
 					</div>
 					<div class="col-md-4">
 						<label for=""></label>
-						<input type="text" class="form-control" placeholder="Nama Keluarga" name="nama_keluarga">
+						<input type="text" class="form-control" placeholder="Nama Keluarga" name="nama_keluarga[]">
 					</div>
 					<div class="col-md-4">
 						<label for=""></label>
-						<input type="number" class="form-control" placeholder="SHDK" name="shdk">
+						<input type="number" class="form-control" placeholder="SHDK" name="shdk[]">
 					</div>
 				</div>
 			`);
