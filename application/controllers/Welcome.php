@@ -16,7 +16,7 @@ class Welcome extends CI_Controller
 	{
 		$data['dataSurat'] = $this->surat_model->getAllData();
 		$data['dataBerita'] = $this->berita_model->getLimitData();
-		$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+		$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
 
 		$this->load->view('welcome', $data);
 	}

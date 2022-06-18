@@ -11,13 +11,14 @@ class Notifikasi_model extends CI_Model
     parent::__construct();
   }
 
-  public function getAllData()
+  public function getAllData($nik)
   {
     $this->db->select('permintaan_surat.*, jenis_surat.jenis, penduduk.nama, akun.nama as admin');
     $this->db->from('permintaan_surat');
     $this->db->join('jenis_surat', 'jenis_surat.id = permintaan_surat.id_jenis_surat');
     $this->db->join('penduduk', 'penduduk.nik = permintaan_surat.nik');
     $this->db->join('akun', 'akun.id = permintaan_surat.id_admin');
+    $this->db->where('permintaan_surat.nik', $nik);
     $this->db->order_by("FIELD(permintaan_surat.status, 'pending', 'diproses', 'selesai', 'ditolak')");
 
     $query = $this->db->get()->result_array();
@@ -25,13 +26,14 @@ class Notifikasi_model extends CI_Model
     return $query;
   }
 
-  public function getTotalNotifikasi()
+  public function getTotalNotifikasi($nik)
   {
     $this->db->select('*');
     $this->db->from('permintaan_surat');
     $this->db->join('jenis_surat', 'jenis_surat.id = permintaan_surat.id_jenis_surat');
     $this->db->join('penduduk', 'penduduk.nik = permintaan_surat.nik');
     $this->db->where('status', 'pending');
+    $this->db->where('permintaan_surat.nik', $nik);
     $this->db->or_where('status', 'diproses');
     $query = $this->db->get();
 

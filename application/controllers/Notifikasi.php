@@ -15,8 +15,8 @@ class Notifikasi extends CI_Controller
   public function index()
   {
     $data['title'] = 'Notifikasi';
-    $data['dataNotifikasi'] = $this->notifikasi_model->getAllData();
-    $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+    $data['dataNotifikasi'] = $this->notifikasi_model->getAllData($_SESSION['nik']);
+    $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
 
     return $this->load->view('notifikasi/index', $data);
   }
