@@ -6,8 +6,20 @@ $(".inputSurat").append(`
 	<input type="text" class="form-control" placeholder="NIK Jenazah" name="nik_jenazah">
 </div>
 <div class="col-md-6 mb-2">
+	<label for="">No Kartu Keluarga</label>
+	<input type="text" class="form-control" placeholder="No KK Jenazah" name="no_kk">
+</div>
+<div class="col-md-6 mb-2">
 	<label for="">Nama</label>
 	<input type="text" class="form-control" placeholder="Nama Jenazah" name="nama_jenazah">
+</div>
+<div class="col-md-6 mb-2">
+	<label for="">Jenis Kelamin</label>
+	<select class="form-select" name="jk_jenazah">
+		<option value="0">Pilih Jenis Kelamin</option>
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
 </div>
 <div class="col-md-6 mb-2">
 	<label for="">Tempat Lahir</label>
@@ -16,6 +28,10 @@ $(".inputSurat").append(`
 <div class="col-md-3 mb-2">
 	<label for="">Tanggal Lahir</label>
 	<input type="date" class="form-control" name="tanggal_lahir">
+</div>
+<div class="col-md-3 mb-2">
+	<label for="">Umur</label>
+	<input type="number" class="form-control" name="umur">
 </div>
 <div class="col-md-3 mb-2">
 	<label for="">Agama</label>
@@ -28,6 +44,19 @@ $(".inputSurat").append(`
 		<option value="Hindu">Hindu</option>
 		<option value="Konghuchu">Konghuchu</option>
 	</select>
+</div>
+<div class="col-md-6 mb-2">
+	<label for="">Status Perkawinan</label>
+	<select class="form-select" name="status_perkawinan">
+		<option value="0">Pilih Status Perkawinan</option>
+		<option value="Belum Kawin">Belum Kawin</option>
+		<option value="Kawin">Kawin</option>
+		<option value="Cerai Hidup">Cerai Hidup</option>
+	</select>
+</div>
+<div class="col-md-6 mb-2">
+	<label for="">Pekerjaan</label>
+	<input type="text" class="form-control" name="pekerjaan">
 </div>
 <div class="col-md-6 mb-2">
 	<label for="">Anak ke</label>
@@ -58,6 +87,10 @@ $(".inputSurat").append(`
 	<input type="number" class="form-control" placeholder="RW" name="rw_jenazah">
 </div>
 <div class="col-md-3 mb-2">
+	<label for="">Warga Negara</label>
+	<input type="text" class="form-control" placeholder="ex: WNI" name="warga_negara">
+</div>
+<div class="col-md-3 mb-2">
 	<label for="">Tanggal Kematian</label>
 	<input type="date" class="form-control" name="tanggal_kematian">
 </div>
@@ -78,62 +111,22 @@ $(".inputSurat").append(`
 	<!-- <input type="text" class="form-control" placeholder="Lainnya" name="yang_menerangkan"> -->
 	<select name="yang_menerangkan" id="yang_menerangkan" class="form-select">
 		<option value="">Pilih</option>
-		<option value="Dokter">Dokter</option>
-		<option value="Perawat">Perawat</option>
-		<option value="Tes Kes Lainnya">Tes Kes Lainnya</option>
-		<option value="Lainnya">Lainnya</option>
+		<option value="1">Dokter</option>
+		<option value="2">Perawat</option>
+		<option value="3">Tes Kes Lainnya</option>
+		<option value="4">Lainnya</option>
 	</select>
 </div>
-<!-- Ibu -->
-<!-- <h5 class="mt-4">IBU</h5>
-<div class="col-md-6 mb-2">
-	<label for="">NIK</label>
-	<input type="text" class="form-control" placeholder="NIK ibu" name="nik_ibu">
-</div>
+<!-- Pelapor -->
+<h5 class="mt-4">Pelapor</h5>
 <div class="col-md-6 mb-2">
 	<label for="">Nama Lengkap</label>
-	<input type="text" class="form-control" placeholder="Nama lengkap ibu" name="nama_ibu">
+	<input type="text" class="form-control" placeholder="Nama lengkap" name="nama_pelapor">
 </div>
 <div class="col-md-6 mb-2">
-	<label for="">Tanggal lahir</label>
-	<input type="date" class="form-control" placeholder="Taggal lahir" name="taggal_lahir_ibu">
+	<label for="">Hubungan dengan yang meninggal</label>
+	<input type="text" class="form-control" placeholder="ex: Anak" name="hubungan_pelapor">
 </div>
-<div class="col-md-3 mb-2">
-	<label for="">Pekerjaan</label>
-	<input type="text" class="form-control" placeholder="Pekerjaan" name="pekerjaan_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Provinsi</label>
-	<input type="text" class="form-control" placeholder="Provinsi" name="provinsi_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Kabupaten</label>
-	<input type="text" class="form-control" placeholder="Kabupaten" name="kab_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Kecamatan</label>
-	<input type="text" class="form-control" placeholder="Kecamatan" name="kecamatan_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Desa</label>
-	<input type="text" class="form-control" placeholder="Desa/Keluarahan" name="desa_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">RT</label>
-	<input type="number" class="form-control" placeholder="RT" name="rt_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">RW</label>
-	<input type="number" class="form-control" placeholder="RW" name="rw_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Kewarga Negaraan</label>
-	<input type="text" class="form-control" placeholder="WNI" name="kewarga_negaraan_ibu">
-</div>
-<div class="col-md-3 mb-2">
-	<label for="">Kebangsaan</label>
-	<input type="text" class="form-control" placeholder="INDONESIA" name="kebangsaan_ibu">
-</div> -->
 <!-- Ayah -->
 <!-- <h5 class="mt-4">AYAH</h5>
 <div class="col-md-6 mb-2">
