@@ -16,19 +16,20 @@ class Auth extends CI_Controller
   function cheklogin(){
     $nik = $this->input->post('nik');
     // query chek users
-    $this->db->where('nik', $nik);
-    $users = $this->db->get('penduduk');
+		$this->db->where('nik', $nik);
+		$users = $this->db->get('penduduk');
 
-    if($users->num_rows()>0){
-      // retrive user data to session
-      $user = $users->row_array();
-      $this->session->set_userdata($user);
-
-      redirect('welcome');
-    } else{
-        $this->session->set_flashdata('status_login','nik yang anda inputkan salah');
-        redirect('auth');
-    }
+		if($users->num_rows()>0){
+			// retrive user data to session
+			$user = $users->row_array();
+			$this->session->set_userdata($user);
+			$this->session->set_userdata('isUserLoggedIn', true);
+			redirect('welcome');
+		} else{
+				$this->session->set_flashdata('status_login','nik yang anda inputkan salah');
+				redirect('auth');
+		}
+	
   }
 
   function logout(){

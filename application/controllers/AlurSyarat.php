@@ -15,7 +15,9 @@ class AlurSyarat extends CI_Controller
   {
     $data['title'] = "Alur/Syarat";
     $data['dataSurat'] = $this->surat_model->getAllData();
-    $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+			$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+		}
 
     return $this->load->view('alur_syarat/index', $data);
   }

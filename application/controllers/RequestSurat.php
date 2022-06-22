@@ -17,7 +17,9 @@ class RequestSurat extends CI_Controller
     if (isset($_SESSION['nik'])) {
       $data['title'] = 'Request Surat';
       $data['dataSurat'] = $this->surat_model->getSurat();
-      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+			if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+				$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+			}
       // var_dump($data);
       return $this->load->view('request_surat/index', $data);
     } else

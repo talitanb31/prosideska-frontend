@@ -13,8 +13,9 @@ class Berita extends CI_Controller
   public function index()
   {
     $data = [];
-    $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
-
+		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+			$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+		}
     if ($this->input->get('q') !== null)
       $data['dataBerita'] = $this->berita_model->search($this->input->get('q'));
     else

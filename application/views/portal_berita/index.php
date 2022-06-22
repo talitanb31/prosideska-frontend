@@ -46,7 +46,7 @@
                     </form>
 					<?php foreach($dataBerita as $item) : ?>
 					<div class="col-lg-3">
-						<div class="card">
+						<div class="card" style="height: 450px; max-height: 350px">
                             <img src="<?='http://localhost/prosideska/assets/berita/'.$item['cover']?>"
                                 class="card-img-top"
                                 alt="..."
@@ -54,6 +54,8 @@
                             <div class="card-body">
 								<h5 class="card-title"><?=ucwords($item['title'])?></h5>
 								<p class="card-text"><?=substr($item['deskripsi'],0,30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
+							</div>
+							<div class="card-footer">
 								<a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
 							</div>
 						</div>

@@ -84,15 +84,17 @@
                 <div class="row g-5 align-items-center">
 					<?php foreach($dataBerita as $item) : ?>
 					<div class="col-lg-3">
-						<div class="card">
+						<div class="card" style="height: 450px; max-height: max-content">
 							<img src="<?='http://localhost/prosideska/assets/berita/'.$item['cover']?>"
                                 class="card-img-top"
                                 alt="..."
-                                height="200">
+                                style="height: 250px; ">
 							<div class="card-body">
 								<h5 class="card-title"><?=ucwords($item['title'])?></h5>
                                 <p class="card-text"><?=substr($item['deskripsi'],0,30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
-                                <a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
+							</div>
+							<div class="card-footer">
+								<a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
 							</div>
 						</div>
 					</div>
@@ -113,6 +115,18 @@
 							<div class="form-floating">
 								<input type="text" class="form-control" name="nama" id="nama" placeholder="Masukkan nama lengkap disini">
 								<label for="nama">Nama Lengkap</label>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-floating">
+								<input type="email" class="form-control" name="email" id="email" placeholder="Masukkan email dengan benar">
+								<label for="email">Email</label>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-floating">
+								<input type="text" class="form-control" name="subjek" id="subjek" placeholder="Masukkan subjek lengkap disini">
+								<label for="subjek">Subjek</label>
 							</div>
 						</div>
 						<div class="col-12">

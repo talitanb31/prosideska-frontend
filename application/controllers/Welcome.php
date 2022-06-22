@@ -16,9 +16,15 @@ class Welcome extends CI_Controller
 	{
 		$data['dataSurat'] = $this->surat_model->getAllData();
 		$data['dataBerita'] = $this->berita_model->getLimitData();
-		$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
-
-		$this->load->view('welcome', $data);
+		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+			$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+			$this->load->view('welcome', $data);
+		}else{
+			
+			$data['dataSurat'] = $this->surat_model->getAllData();
+			$data['dataBerita'] = $this->berita_model->getLimitData();
+			$this->load->view('welcome', $data);
+		}
 	}
 
 	public function store()
