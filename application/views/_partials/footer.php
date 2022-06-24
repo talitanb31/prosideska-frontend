@@ -2,7 +2,7 @@
 	<div class="container py-5">
 		<div class="row g-5">
 			<div class="col-lg-4 col-md-6">
-				<h5 class="text-white mb-4">Portal Berita</h5>
+				<h5 class="text-white mb-4">Menu</h5>
 				<a class="btn btn-link text-white-50" href="<?= base_url('berita') ?>">Portal Berita</a>
 				<a class="btn btn-link text-white-50" href="<?= base_url('alursyarat') ?>">Alur & Syarat</a>
 				<a class="btn btn-link text-white-50" href="<?= base_url('requestsurat') ?>">Permintaan Surat</a>
