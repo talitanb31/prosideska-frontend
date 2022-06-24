@@ -26,7 +26,7 @@ class Notifikasi_model extends CI_Model
     return $query;
   }
 
-  public function getTotalNotifikasi($nik)
+  public function getTotalNotifikasi($nik = '')
   {
     $this->db->select('*');
     $this->db->from('permintaan_surat');

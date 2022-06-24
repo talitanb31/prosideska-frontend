@@ -13,9 +13,9 @@ class Berita extends CI_Controller
   public function index()
   {
     $data = [];
-		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
-			$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
-		}
+    if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+    }
     if ($this->input->get('q') !== null)
       $data['dataBerita'] = $this->berita_model->search($this->input->get('q'));
     else
@@ -27,7 +27,8 @@ class Berita extends CI_Controller
   public function detail($slug)
   {
     $data['data'] = $this->berita_model->detail($slug);
-    $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi();
+    if (isset($_SESSION['nik']) && !empty($_SESSION['nik']))
+      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
 
     $data['beritaLainnya'] = $this->berita_model->beritaOther($slug);
 
