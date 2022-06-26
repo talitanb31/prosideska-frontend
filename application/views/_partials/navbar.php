@@ -18,7 +18,7 @@
 			<ul class="navbar-nav">
 				<li class="nav-item btn-rotate dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<?= $_SESSION['nama'] ?>
+						<?= $_SESSION['nama_user'] ?>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="<?= site_url('notifikasi/index') ?>">Notifikasi <span class="text-danger"><?= $totalNotifikasi ?></span></a>
