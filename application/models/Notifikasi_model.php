@@ -33,7 +33,7 @@ class Notifikasi_model extends CI_Model
     $this->db->join('jenis_surat', 'jenis_surat.id = permintaan_surat.id_jenis_surat');
     $this->db->join('penduduk', 'penduduk.nik = permintaan_surat.nik');
     $this->db->where('status', 'pending');
-    $this->db->where('permintaan_surat.nik', $nik);
+    $this->db->where('permintaan_surat.nik = ', $nik);
     $this->db->or_where('status', 'diproses');
     $query = $this->db->get();
 
