@@ -21,36 +21,31 @@
         <!-- Header End -->
         <div class="container-xxl py-5 bg-dark page-header mb-5">
             <div class="container my-5 pt-5 pb-4">
-                <h1 class="display-3 text-white mb-3 animated slideInDown"><?= $title ?></h1>
+                <h1 class="display-3 text-white mb-3 animated slideInDown"><?= ucwords($this->uri->segment(1)) ?></h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb text-uppercase">
                         <li class="breadcrumb-item"><a href="<?= base_url() ?>"><?= ucwords($this->uri->segment(1) == null ? 'Beranda' : 'beranda') ?></a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page"><?= $title ?></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page"><?= ucwords($this->uri->segment(1)) ?></li>
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Header End -->
 
-        <!-- Category Start -->
-        <div class="container-xxl py-5">
+        <!-- Detail Berita Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
-                <!-- <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Alur/Syarat Pengajuan Surat</h1> -->
-                <div class="row g-4">
-
-                    <?php foreach ($dataSurat as $item) : ?>
-                        <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <a class="cat-item rounded p-4" href="<?= base_url('alursyarat/detail/') ?><?= $item['id'] ?>">
-                                <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
-                                <h6 class="mb-3"><?= $item['jenis'] ?></h6>
-                                <p class="mb-0"><?php echo substr($item['syarat'], 0, 100) . "..." ?></p>
-                            </a>
+                <div class="row gy-5 gx-4">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <h4 class="mb-3">Syarat / Deskripsi <?= $data['jenis'] ?></h4>
+                            <p><?= $data['syarat'] ?></p>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Category End -->
+        <!-- Detail Berita End -->
 
         <!-- Footer Start -->
         <?php $this->load->view('_partials/footer.php') ?>

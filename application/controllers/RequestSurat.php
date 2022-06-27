@@ -17,9 +17,9 @@ class RequestSurat extends CI_Controller
     if (isset($_SESSION['nik'])) {
       $data['title'] = 'Request Surat';
       $data['dataSurat'] = $this->surat_model->getSurat();
-			if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
-				$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
-			}
+      if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+        $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+      }
       // var_dump($data);
       return $this->load->view('request_surat/index', $data);
     } else
@@ -65,7 +65,7 @@ class RequestSurat extends CI_Controller
     }
 
     $json = json_encode($form);
-    echo $json;
+    // echo $json;
     /* End Mengkonversi form data menjadi json */
 
     /* Simpan ke database */

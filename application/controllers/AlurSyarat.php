@@ -15,14 +15,22 @@ class AlurSyarat extends CI_Controller
   {
     $data['title'] = "Alur/Syarat";
     $data['dataSurat'] = $this->surat_model->getAllData();
-		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
-			$data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
-		}
+    if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+    }
 
     return $this->load->view('alur_syarat/index', $data);
   }
+
+  public function detail($id)
+  {
+    $data['title'] = "Alur/Syarat";
+    $data['data'] = $this->surat_model->detailSyarat($id);
+
+    if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+      $data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+    }
+
+    return $this->load->view('alur_syarat/detail', $data);
+  }
 }
-
-
-/* End of file AlurSyarat.php */
-/* Location: ./application/controllers/AlurSyarat.php */
