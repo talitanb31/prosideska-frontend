@@ -21,6 +21,14 @@ $(".inputSurat").append(`
 	<input type="date" class="form-control" name="tanggal_lahir">
 </div>
 <div class="col-md-6">
+	<label for="">Jenis Kelamin</label>
+	<select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
+		<option value="">Pilih Jenis Kelamin</option>
+		<option value="Laki-laki">Laki-laki</option>
+		<option value="Perempuan">Perempuan</option>
+	</select>
+</div>
+<div class="col-md-6">
 	<label for="">Nama Instansi</label>
 	<input type="text" class="form-control" placeholder="Nama instansi" name="nama_instansi">
 </div>
