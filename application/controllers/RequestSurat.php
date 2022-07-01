@@ -69,7 +69,7 @@ class RequestSurat extends CI_Controller
     /* End Mengkonversi form data menjadi json */
 
     /* Simpan ke database */
-    if ($this->PermintaanSurat_model->insert($json)) {
+    if ($this->PermintaanSurat_model->insert($this->input->post('id_jenis_surat'), $json)) {
       $this->session->set_flashdata('pesan', 'Pengajuan berhasil dikirim');
 
       echo '<script type="text/javascript">alert("Berhasil mengirim permintaan");window.location="' . base_url() . 'requestsurat"</script>';
