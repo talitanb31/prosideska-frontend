@@ -22,8 +22,8 @@
         <div class="container-fluid p-0">
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="<?php echo base_url() ?>assets/img/IMG_3230.JPG" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <img class="img-fluid" src="<?php echo base_url() ?>assets/img/sawah3.JPG" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-start">
                                 <div class="col-10 col-lg-8">
@@ -68,16 +68,16 @@
             <div class="container">
                 <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Portal Berita</h1>
                 <div class="row g-5 align-items-center">
-                    <?php foreach ($dataBerita as $item) : ?>
+                    <?php foreach ($dataBerita as $key => $item) : ?>
                         <div class="col-lg-3">
                             <div class="card" style="height: 450px; max-height: max-content">
-                                <img src="<?= 'http://localhost/prosideska/assets/berita/' . $item['cover'] ?>" class="card-img-top" alt="..." style="height: 250px; ">
+                                <img src="<?= $item->thumbnail ?>" class="card-img-top" alt="..." style="height: 250px; ">
                                 <div class="card-body">
-                                    <h5 class="card-title"><?= ucwords($item['title']) ?></h5>
-                                    <p class="card-text"><?= substr($item['deskripsi'], 0, 30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
+                                    <h5 class="card-title"><?= ucwords($item->title) ?></h5>
+                                    <p class="card-text"><?= substr($item->description, 0, 30) ?><?= strlen($item->description) > 30 ? '...' : '' ?></p>
                                 </div>
                                 <div class="card-footer">
-                                    <a href="<?= base_url('berita/detail/') ?><?= $item['slug'] ?>" class="btn btn-primary">Selanjutnya</a>
+                                    <a href="<?= base_url('berita/detail/') ?><?= strtolower($item->title) ?>" class="btn btn-primary">Selanjutnya</a>
                                 </div>
                             </div>
                         </div>

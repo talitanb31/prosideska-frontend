@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php $this->load->view("_partials/head.php")?>
+    <?php $this->load->view("_partials/head.php") ?>
 </head>
 
 <body>
@@ -16,24 +16,24 @@
         <!-- Spinner End -->
 
 
-		<?php $this->load->view("_partials/navbar.php") ?>
+        <?php $this->load->view("_partials/navbar.php") ?>
 
-		<!-- Header End -->
-		<div class="container-xxl py-5 bg-dark page-header mb-5">
+        <!-- Header End -->
+        <div class="container-xxl py-5 bg-dark page-header mb-5">
             <div class="container my-5 pt-5 pb-4">
-                <h1 class="display-3 text-white mb-3 animated slideInDown"><?=ucwords($this->uri->segment(1))?></h1>
+                <h1 class="display-3 text-white mb-3 animated slideInDown"><?= ucwords($this->uri->segment(1)) ?></h1>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb text-uppercase">
-                        <li class="breadcrumb-item"><a href="<?=base_url() ?>"><?=ucwords($this->uri->segment(1) == null ? 'Beranda' : 'beranda')?></a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page"><?=ucwords($this->uri->segment(1))?></li>
+                        <li class="breadcrumb-item"><a href="<?= base_url() ?>"><?= ucwords($this->uri->segment(1) == null ? 'Beranda' : 'beranda') ?></a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page"><?= ucwords($this->uri->segment(1)) ?></li>
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Header End -->
 
-		  <!-- Berita Start -->
-		  <div class="container-xxl py-5">
+        <!-- Berita Start -->
+        <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-4">
                     <form action="<?php site_url('berita/index') ?>" class="row" method="get">
@@ -44,31 +44,31 @@
                             <button type="submit" class="btn btn-success">Cari</button>
                         </div>
                     </form>
-					<?php foreach($dataBerita as $item) : ?>
-					<div class="col-lg-3">
-						<div class="card" style="height: 450px; max-height: 350px">
-                            <img src="<?='http://localhost/prosideska/assets/berita/'.$item['cover']?>"
-                                class="card-img-top"
-                                alt="..."
-                                height="200">
-                            <div class="card-body">
-								<h5 class="card-title"><?=ucwords($item['title'])?></h5>
-								<p class="card-text"><?=substr($item['deskripsi'],0,30) ?><?= strlen($item['deskripsi']) > 30 ? '...' : '' ?></p>
-							</div>
-							<div class="card-footer">
-								<a href="<?=base_url('berita/detail/')?><?=$item['slug']?>" class="btn btn-primary">Selanjutnya</a>
-							</div>
-						</div>
-					</div>
-					<?php endforeach?>
-				
+                    <?php foreach ($dataBerita as $item) : ?>
+                        <div class="col-lg-3">
+                            <div class="card" style="height: 450px; max-height: max-content">
+                                <img src="<?= $item->thumbnail ?>" class="card-img-top" alt="..." style="height: 250px; ">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?= ucwords($item->title) ?></h5>
+                                    <p class="card-text"><?= substr($item->description, 0, 30) ?><?= strlen($item->description) > 30 ? '...' : '' ?></p>
+                                </div>
+                                <div class="card-footer">
+                                    <?php
+                                    $slug = strtolower(trim(preg_replace('/[\s-]+/', '-', preg_replace('/[^A-Za-z0-9-]+/', '-', preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $item->title))))), '-'));
+                                    ?>
+                                    <a href="<?= base_url('berita/detail/') ?><?= strtolower($item->title) ?>" class="btn btn-primary">Selanjutnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach ?>
+
                 </div>
             </div>
         </div>
         <!-- Category End -->
 
         <!-- Footer Start -->
-		<?php $this->load->view('_partials/footer.php') ?>
+        <?php $this->load->view('_partials/footer.php') ?>
         <!-- Footer End -->
 
 
@@ -76,8 +76,8 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
     </div>
 
-	<!-- include js.php -->
-	<?php $this->load->view("_partials/js.php") ?>
+    <!-- include js.php -->
+    <?php $this->load->view("_partials/js.php") ?>
 </body>
 
 </html>
