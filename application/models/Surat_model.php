@@ -17,7 +17,7 @@ class Surat_model extends CI_Model
   // ------------------------------------------------------------------------
   public function getAllData()
   {
-    $this->db->select('*');
+    $this->db->select('syarat_surat.*, jenis_surat.jenis');
     $this->db->from('syarat_surat');
     $this->db->join('jenis_surat', 'jenis_surat.id = syarat_surat.id_jenis_surat');
     $query = $this->db->get()->result_array();
