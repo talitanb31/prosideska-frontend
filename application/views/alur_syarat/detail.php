@@ -38,8 +38,10 @@
                 <div class="row gy-5 gx-4">
                     <div class="col-lg-12">
                         <div class="row">
-                            <h4 class="mb-3">Syarat / Deskripsi <?= $data['jenis'] ?></h4>
-                            <p><?= $data['syarat'] ?></p>
+                            <div class="col-md-12">
+                                <h4 class="mb-3">Syarat / Deskripsi <?= $data['jenis'] ?></h4>
+                                <p><?= $data['syarat'] ?></p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -9,15 +9,16 @@
 	</button>
 	<div class="collapse navbar-collapse" id="navbarCollapse">
 		<div class="navbar-nav ms-auto p-4 p-lg-0">
-			<a href="<?= base_url() ?>" class="nav-item nav-link <?php echo $this->uri->segment(1) != null ? '' : 'active' ?>">Beranda</a>
-			<a href="<?= base_url('berita') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'berita' ? 'active' : '' ?>">Portal Berita</a>
-			<a href="<?= base_url('alursyarat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'alursyarat' ? 'active' : '' ?>">Alur/Syarat Pengajuan Surat</a>
-			<a href="<?= base_url('requestsurat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'requestsurat' ? 'active' : '' ?>">Pengajuan Surat</a>
+			<a style="font-size: 12px;" href="<?= base_url() ?>" class="nav-item nav-link <?php echo $this->uri->segment(1) != null ? '' : 'active' ?>">Beranda</a>
+			<a style="font-size: 12px;" href="<?= base_url('berita') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'berita' ? 'active' : '' ?>">Portal Berita</a>
+			<a style="font-size: 12px;" href="<?= base_url('alursyarat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'alursyarat' ? 'active' : '' ?>">Alur/Syarat Pengajuan Surat</a>
+			<a style="font-size: 12px;" href="<?= base_url('kritiksaran') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'kritiksaran' ? 'active' : '' ?>">Kritik Saran</a>
+			<a style="font-size: 12px;" href="<?= base_url('requestsurat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'requestsurat' ? 'active' : '' ?>">Pengajuan Surat</a>
 		</div>
 		<?php if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) { ?>
-			<ul class="navbar-nav">
+			<ul class="navbar-nav ms-auto p-4 p-lg-0">
 				<li class="nav-item btn-rotate dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<a style="font-size: 12px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<?= $_SESSION['nama_user'] ?>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">

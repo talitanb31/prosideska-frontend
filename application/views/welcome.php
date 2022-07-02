@@ -53,7 +53,7 @@
                             <a class="cat-item rounded p-4" href="<?= base_url('alursyarat/detail/') ?><?= $item['id'] ?>">
                                 <i class="fa fa-3x fa-mail-bulk text-primary mb-4"></i>
                                 <h6 class="mb-3"><?= $item['jenis'] ?></h6>
-                                <p class="mb-0"><?php echo substr($item['syarat'], 0, 100) . "..." ?></p>
+                                <p class="mb-0"><?= strlen($item['syarat']) > 50 ? '...' : $item['syarat'] ?></p>
                             </a>
                         </div>
                     <?php endforeach; ?>

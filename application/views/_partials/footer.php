@@ -5,6 +5,7 @@
 				<h5 class="text-white mb-4">Menu</h5>
 				<a class="btn btn-link text-white-50" href="<?= base_url('berita') ?>">Portal Berita</a>
 				<a class="btn btn-link text-white-50" href="<?= base_url('alursyarat') ?>">Alur & Syarat</a>
+				<a class="btn btn-link text-white-50" href="<?= base_url('kritiksaran') ?>">Kritik Saran</a>
 				<a class="btn btn-link text-white-50" href="<?= base_url('requestsurat') ?>">Permintaan Surat</a>
 				<a class="btn btn-link text-white-50" href="<?= base_url('notifikasi') ?>">Notifikasi</a>
 			</div>
