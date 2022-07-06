@@ -19,7 +19,7 @@
 		<?php $this->load->view("_partials/navbar.php") ?>
 
 		<!-- Header End -->
-		<div class="container-xxl py-5 bg-dark page-header mb-5">
+		<div class="container-xxl py-5 bg-dark page-header-pengajuan mb-5">
 			<div class="container my-5 pt-5 pb-4">
 				<h1 class="display-3 text-white mb-3 animated slideInDown"><?= $title ?></h1>
 				<nav aria-label="breadcrumb">
