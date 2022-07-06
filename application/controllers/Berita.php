@@ -51,6 +51,7 @@ class Berita extends CI_Controller
   public function detail($slug)
   {
     $title = str_replace('%20', ' ', $slug);
+    $title = str_replace('--', ',', $title);
     /* Get API Berita */
     $url = 'https://api-berita-indonesia.vercel.app/cnn/terbaru/';
     $json = file_get_contents($url);

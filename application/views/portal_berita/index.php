@@ -55,8 +55,9 @@
                                 <div class="card-footer">
                                     <?php
                                     $slug = strtolower(trim(preg_replace('/[\s-]+/', '-', preg_replace('/[^A-Za-z0-9-]+/', '-', preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $item->title))))), '-'));
+                                    // $slug = str_replace(',', '--', $slug);
                                     ?>
-                                    <a href="<?= base_url('berita/detail/') ?><?= strtolower($item->title) ?>" class="btn btn-primary">Selanjutnya</a>
+                                    <a href="<?= base_url('berita/detail/') ?><?= str_replace(',', '--', strtolower($item->title)) ?>" class="btn btn-primary">Selanjutnya</a>
                                 </div>
                             </div>
                         </div>
