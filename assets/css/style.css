@@ -162,14 +162,14 @@
 
 /*** Header ***/
 .header-carousel .container,
-.page-header .container {
+.page-header .page-header-alur .page-header-kritik .page-header-pengajuan .page-header-notifikasi .container {
     padding: 45px 0 45px 35px;
 }
 
 .header-carousel .container::before,
 .header-carousel .container::after,
-.page-header .container::before,
-.page-header .container::after {
+.page-header .page-header-alur .page-header-kritik .page-header-pengajuan .page-header-notifikasi .container::before,
+.page-header .page-header-alur .page-header-kritik .page-header-pengajuan .page-header-notifikasi .container::after {
     position: absolute;
     content: "";
     top: 0;
@@ -180,7 +180,7 @@
 }
 
 .header-carousel .container::after,
-.page-header .container::after {
+.page-header .page-header-alur .page-header-kritik .page-header-pengajuan .page-header-notifikasi .container::after {
     top: 100%;
     margin-top: -15px;
 }
@@ -245,10 +245,26 @@
     background-size: cover;
 }
 
-.page-header {
-    background: url(../img/koran.jpg) center center no-repeat;
+.page-header-alur {
+    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/carousel-2.jpg) center center no-repeat;
     background-size: cover;
 }
+
+.page-header-kritik {
+    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/sawah3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header-pengajuan {
+    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/IMG_3230.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.page-header-notifikasi {
+    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/koran.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 .breadcrumb-item a{
 	color: var(--primary) !important;
 	border: var(--primary) !important;
