@@ -50,6 +50,11 @@
 						<tbody>
 							<?php $no = 1; ?>
 							<?php foreach ($dataNotifikasi as $item) : ?>
+								<?php
+								$CI = &get_instance();
+								$CI->load->model('Notifikasi_model');
+								$CI->Notifikasi_model->isRead($item['id']);
+								?>
 								<tr>
 									<th scope="row"><?= $no ?></th>
 									<td><?= ucwords($item['nama']) ?></td>
