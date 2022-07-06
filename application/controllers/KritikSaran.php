@@ -9,13 +9,16 @@ class KritikSaran extends CI_Controller
 		parent::__construct();
 		$this->load->model('Feedback_model');
 		$this->load->model('notifikasi_model');
+		if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) {
+			$this->data['totalNotifikasi'] = $this->notifikasi_model->getTotalNotifikasi($_SESSION['nik']);
+		}
 	}
 
 	public function index()
 	{
-		$data['title'] = 'Kritik Saran';
+		$this->data['title'] = 'Kritik Saran';
 
-		$this->load->view('kritik_saran/index', $data);
+		$this->load->view('kritik_saran/index', $this->data);
 	}
 
 	public function store()

@@ -16,7 +16,7 @@
 			<a style="font-size: 12px;" href="<?= base_url('requestsurat') ?>" class="nav-item nav-link <?= $this->uri->segment(1) === 'requestsurat' ? 'active' : '' ?>">Pengajuan Surat</a>
 		</div>
 		<?php if (isset($_SESSION['nik']) && !empty($_SESSION['nik'])) { ?>
-			<ul class="navbar-nav ms-auto p-4 p-lg-0">
+			<ul class="navbar-nav p-4 p-lg-0">
 				<li class="nav-item btn-rotate dropdown">
 					<a style="font-size: 12px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						<?= $_SESSION['nama_user'] ?>
