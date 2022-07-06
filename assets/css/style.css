@@ -241,10 +241,14 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(43, 57, 64, .5), rgba(43, 57, 64, .5)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: url(../img/koran.jpg) center center no-repeat;
     background-size: cover;
 }
 
+.page-header {
+    background: url(../img/koran.jpg) center center no-repeat;
+    background-size: cover;
+}
 .breadcrumb-item a{
 	color: var(--primary) !important;
 	border: var(--primary) !important;
